@@ -4,3 +4,4 @@ world-fixed.svg
 *.woff
 world-cover.svg
 dist/*
+/node_modules/

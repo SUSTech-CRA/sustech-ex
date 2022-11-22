@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="zh-Hans" data-loading>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>全球制霸生成器 - 全球部分国家地区制霸标记生成工具</title>
-<meta name="description" content="全球部分国家地区制霸标记生成工具">
-<meta name="keywords" content="中国制霸,全球制霸,神奇海螺试验场,卜卜口">
-<link rel="stylesheet" href="document.css?v={version}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球制霸生成器 - 全球部分国家地区制霸标记生成工具</title>
+    <meta name="description" content="全球部分国家地区制霸标记生成工具">
+    <meta name="keywords" content="中国制霸,全球制霸,神奇海螺试验场,卜卜口">
+    <link rel="stylesheet" href="document.css?v={version}">
+    <style>
+        html {
+            font-family: 'Tensentype-JiaLiDaYuanJF', sans-serif;
+        }
+
+        .st1, svg #countrys > * {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: #FFFFFF;
+            stroke: #000000;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        #countrys > [level="5"] {
+            fill: #FF7E7E;
+        }
+
+        #countrys > [level="4"] {
+            fill: #FFB57E;
+        }
+
+        #countrys > [level="3"] {
+            fill: #FFE57E;
+        }
+
+        #countrys > [level="2"] {
+            fill: #A8FFBE;
+        }
+
+        #countrys > [level="1"] {
+            fill: #88AEFF;
+        }
+
+        #countrys > [level="w"] {
+            fill: #edd1ff;
+        }
+    </style>
 </head>
 <body>
 <!--svg-->
@@ -22,24 +61,19 @@
     <a data-level="0">没去过</a>
 </div>
 <footer>
-	<a class="save-btn btn">保存成图片</a>
-	<a href="https://github.com/itorr/china-ex" target="_blank">GitHub</a>
-	<a href="https://lab.magiconch.com/china-ex/" target="_blank">CN</a>
-	<a href="https://zhung.com.tw/japanex/" target="_blank">JP</a>
-	<a href="https://tenpages.github.io/us-level/us.html" target="_blank">US</a>
-	<a href="https://tenpages.github.io/us-level/eu.html" target="_blank">EU</a>
+    <a class="save-btn btn">保存成图片</a>
 </footer>
 <div class="output" style="display: none;">
-	<div>
-		<img>
-	</div>
-	<p>
-		手机端可长按图片
-		<b>“添加到照片”</b>
-	</p>
-	<div>
-		<a class="btn">关闭</a>
-	</div>
+    <div>
+        <img>
+    </div>
+    <p>
+        手机端可长按图片
+        <b>“添加到照片”</b>
+    </p>
+    <div>
+        <a class="btn">关闭</a>
+    </div>
 </div>
 <script src="document.js?v={version}"></script>
 </body>
