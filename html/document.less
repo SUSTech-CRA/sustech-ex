@@ -1,26 +1,72 @@
 html {
-  font: 16px/20px slice, sans-serif;
+  font-family: sans-serif;
+  font-size: 16px;
   background-color: #f4a666;
   color: #111;
 }
 
-body {
+html, body {
   margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 svg {
+  max-height: 100% !important;
+  max-width: 80% !important;
   display: block;
   width: 100%;
   height: 100%;
   pointer-events: none;
+  padding-top: 10px;
 
   #countrys {
     pointer-events: none;
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: #FFFFFF;
+    stroke: #000000;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 
     & > * {
       pointer-events: auto;
       cursor: pointer;
     }
+  }
+
+  #countrys > [level="5"] {
+    fill: #FF7E7E;
+  }
+
+  #countrys > [level="4"] {
+    fill: #FFB57E;
+  }
+
+  #countrys > [level="3"] {
+    fill: #FFE57E;
+  }
+
+  #countrys > [level="2"] {
+    fill: #A8FFBE;
+  }
+
+  #countrys > [level="1"] {
+    fill: #88AEFF;
+  }
+
+  #countrys > [level="w"] {
+    fill: #edd1ff;
   }
 
   a {
@@ -99,10 +145,11 @@ a {
   background: #FFF;
   box-shadow: 0 0 0 2px #111;
   border-radius: 3px;
+  width: 80px;
 }
 
 footer {
-  padding: 10px 20px 80px;
+  padding: 10px 20px 30px;
   line-height: 20px;
   transition: opacity 1s ease;
   display: flex;
@@ -118,7 +165,7 @@ footer {
   }
 }
 
-.output {
+.output, .share {
   display: flex;
   position: fixed;
   top: 0;
@@ -154,6 +201,10 @@ footer {
     padding: 8px 12px;
     box-shadow: 0 0 0 2px #111;
   }
+}
+
+.share img {
+  width: 400px;
 }
 
 @media (max-width: 800px) , (max-height: 800px) {

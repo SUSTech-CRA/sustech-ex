@@ -19,7 +19,6 @@ const replaceSVG = text => {
     text = text.replace(/ version="1.1"/g, '')
     text = text.replace(/ xmlns:xlink="http:\/\/www\.w3\.org\/1999\/xlink"/g, '')
     text = text.replace(/<rect y="0" class=".+?" width="2000" height="1210"\/?>/g, '')
-    text = text.replace(/'Tensentype-JiaLiDaYuanJF'/g, 'slice')
 
     text = text.replace(/<polygon id="(.+?)" class="(.+?)" points="([^"]+)\s{0,}"\/>/g, (all, id, c, p) => {
         return `<path id="${id}" class="${c}" d="M${p.trim().replace(/[\n\r]/g, ' ').replace(/\s+/g, ' ')}z" />`
@@ -81,26 +80,26 @@ writeFileSync('dist/index.html', html, 'utf8');
 
 
 const UglifyJS = require('uglify-js');
-
-
 let jsText = readFileSync('html/document.js', 'utf8');
 
 jsText = replaceVersion(jsText);
 jsText = jsText.replace(/<!--.+?-->/g, '');
 jsText = jsText.replace(/^\s{0,}\/\/.+/g, '');
-/*jsText = `(_=>{${jsText}})()`;
-const minified = UglifyJS.minify({
+jsText = `(_=>{${jsText}})()`;
+const minifiedJS = UglifyJS.minify({
     'document.js': jsText
 }, {
     // drop_console: true,
     // pass: 3
 })
-if (!minified.code) {
-    throw minified;
+if (!minifiedJS.code) {
+    throw minifiedJS;
 }
-jsText = minified.code;*/
+jsText = minifiedJS.code;
 writeFileSync('dist/document.js', jsText, 'utf8');
 
+let cssText = readFileSync('html/document.css', 'utf8');
+let minifiedCSS = require("csso").minify(cssText, {restructure: true}).css;
 
-copyFileSync('html/document.css', 'dist/document.css');
-copyFileSync('html/slice.woff', 'dist/slice.woff');
+writeFileSync('dist/document.css', minifiedCSS, 'utf8');
+//copyFileSync('html/slice.woff', 'dist/slice.woff');

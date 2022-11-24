@@ -125,10 +125,9 @@ getFontStyle('slice', styleText => {
     setTimeout(_ => htmlEl.removeAttribute('data-loading'), 2e3);
 });
 
-const width = 1652;
-const height = 1000;
+const width = 2560;
+const height = 2480;
 const zoom = 1;
-console.log(document.body.clientHeight)
 
 const canvas = createElement('canvas');
 
@@ -155,7 +154,6 @@ const urlToImageEl = (url, cb) => {
     addEvent(img, 'load', _ => setTimeout(_ => cb(img), 500));
     img.src = url;
 };
-const log = _ => (createImage()).src = `https://lab.magiconch.com/api/world-ex/log?levels=${getLevels().join('')}`;
 
 const outputEl = $('.output');
 const outputImageStyle = outputEl.style;
@@ -166,7 +164,7 @@ const saveImage = _ => {
     const xmlText = `<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}px" height="${height}px">${svgEl.innerHTML}</svg>`;
     const dataURL = fromXMLCreateImageSrc(xmlText);
     urlToImageEl(dataURL, imgEl => {
-        ctx.fillStyle = '#BAE4FF';
+        ctx.fillStyle = '#f4a666';
         ctx.fillRect(
             0, 0,
             width * zoom, width * zoom
@@ -184,15 +182,20 @@ const saveImage = _ => {
             outputImageStyle.display = '';
 
             setTimeout(_ => {
-                saveFile(url, `[神奇海螺][全球制霸]${generateName()}.png`);
+                saveFile(url, `[制霸南科]${generateName()}.png`);
                 htmlEl.removeAttribute('data-running');
             }, 50)
-
-
         }, 'image/png');
     });
-    log();
 };
+
+const shareEl = $(".share");
+addEvent($('.share-btn'), 'click', function () {
+    shareEl.style.display = "flex";
+});
+addEvent($('a', shareEl), 'click', _ => {
+    shareEl.style.display = 'none';
+});
 
 addEvent($('.save-btn'), 'click', saveImage);
 
