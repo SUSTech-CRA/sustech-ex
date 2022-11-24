@@ -189,7 +189,7 @@ const saveImage = _ => {
     });
 };
 
-const shareEl = $(".share");
+const shareEl = $(".about");
 addEvent($('.share-btn'), 'click', function () {
     shareEl.style.display = "flex";
 });

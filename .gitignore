@@ -5,3 +5,4 @@ world-fixed.svg
 world-cover.svg
 dist/*
 /node_modules/
+.DS_Store

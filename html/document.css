@@ -128,6 +128,7 @@ a {
   box-shadow: 0 0 0 2px #111;
   border-radius: 3px;
   width: 80px;
+  text-align: center;
 }
 footer {
   padding: 10px 20px 30px;
@@ -144,7 +145,7 @@ footer a.btn {
   margin-right: 10px;
 }
 .output,
-.share {
+.about {
   display: flex;
   position: fixed;
   top: 0;
@@ -160,7 +161,7 @@ footer a.btn {
   align-items: center;
 }
 .output img,
-.share img {
+.about img {
   display: block;
   width: 520px;
   max-width: 100%;
@@ -169,17 +170,17 @@ footer a.btn {
   aspect-ratio: 1;
 }
 .output p,
-.share p {
+.about p {
   margin: 0;
   padding: 20px 0;
 }
 .output .btn,
-.share .btn {
+.about .btn {
   display: block;
   padding: 8px 12px;
   box-shadow: 0 0 0 2px #111;
 }
-.share img {
+.about img {
   width: 400px;
 }
 @media (max-width: 800px), (max-height: 800px) {

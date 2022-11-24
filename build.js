@@ -40,7 +40,7 @@ const replaceVersion = text => text.replace(/\{version\}/g, ver);
 const {readFileSync, writeFileSync, existsSync, mkdirSync, copyFileSync} = require('fs');
 
 
-let xml = readFileSync('nkd-ex2.svg', 'utf8');
+let xml = readFileSync('nkd-ex.svg', 'utf8');
 
 xml = replaceSVG(xml);
 writeFileSync('world-fixed.svg', xml);
