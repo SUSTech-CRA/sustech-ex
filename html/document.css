@@ -1,7 +1,7 @@
 html {
   font-family: sans-serif;
   font-size: 16px;
-  background-color: #efa263;
+  background-color: #56c5c1;
   color: #111;
 }
 html,
@@ -68,6 +68,9 @@ a {
   color: #111;
   cursor: pointer;
   text-decoration: none;
+}
+.underlined {
+  text-decoration: underline;
 }
 ::selection {
   background-color: #7e98ff;
@@ -162,15 +165,6 @@ footer a.btn {
   justify-content: center;
   align-items: center;
 }
-.output img,
-.about img {
-  display: block;
-  width: 520px;
-  max-width: 100%;
-  margin: 0 auto;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  aspect-ratio: 1;
-}
 .output p,
 .about p {
   margin: 0;
@@ -182,11 +176,16 @@ footer a.btn {
   padding: 8px 12px;
   box-shadow: 0 0 0 2px #111;
 }
+.output img {
+  display: block;
+  width: 520px;
+  max-width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 1;
+}
 .about {
   padding-bottom: 90px;
-}
-.about img {
-  width: 400px;
 }
 @media (max-width: 800px), (max-height: 800px) {
   html {

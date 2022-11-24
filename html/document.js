@@ -124,7 +124,7 @@ const saveImage = _ => {
     const xmlText = `<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}px" height="${height}px">${svgEl.innerHTML}</svg>`;
     const dataURL = fromXMLCreateImageSrc(xmlText);
     urlToImageEl(dataURL, imgEl => {
-        ctx.fillStyle = '#f4a666';
+        ctx.fillStyle = '#56c5c1';
         ctx.fillRect(
             0, 0,
             width * zoom, width * zoom
@@ -153,7 +153,7 @@ const shareEl = $(".about");
 addEvent($('#share-btn'), 'click', function () {
     shareEl.style.display = "flex";
 });
-addEvent($('a', shareEl), 'click', _ => {
+addEvent($('.btn', shareEl), 'click', _ => {
     shareEl.style.display = 'none';
 });
 
