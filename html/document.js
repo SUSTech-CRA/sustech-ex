@@ -37,42 +37,19 @@ addEvent(countryBoxEl, 'click', e => {
     data.target = target;
     data.id = id;
 
-    setLevelTitleEl.innerHTML = id;
+    setLevelTitleEl.innerHTML = id.replace("2", "");
     setLevelStyle.display = 'block';
     const setLevelElRect = getRect(setlevelEl);
     const targetBBox = target.getBBox();
     const svgElBBox = svgEl.getBBox();
     const svgRect = getRect(svgEl);
 
-    // console.log(e)
-    // console.log(target)
-    // console.log(setLevelElRect)
-    // console.log(svgRect)
-
     let left = Math.round(body.scrollLeft + targetRect.left + targetRect.width / 2 - setLevelElRect.width / 2);
-    // left = Math.min(
-    //     left,
-    //     body.offsetWidth + body.scrollWidth - setLevelElRect.width - minMargin
-    // );
-    // left = Math.max(
-    //     left,
-    //     minMargin
-    // );
-
     let top = Math.round(body.scrollTop + targetRect.top + targetRect.height / 2 - setLevelElRect.height / 2);
-    // top = Math.min(
-    //     top,
-    //     body.offsetHeight + body.scrollHeight - setLevelElRect.height - minMargin
-    // );
-    // top = Math.max(
-    //     top,
-    //     minMargin
-    // );
+
     top = body.scrollTop;
 
     const scalc = svgRect.width / 2000;
-
-    // console.log(scalc)
 
     left = targetBBox.x * scalc + svgElBBox.x;
     top = targetBBox.y * scalc + svgElBBox.y;
@@ -106,24 +83,7 @@ addEvent(setlevelEl, 'click', e => {
 gelLevelsAndSet();
 stat();
 
-const readFileToURL = (blob, cb) => {
-    const reader = new FileReader();
-    reader.onload = e => cb(e.target.result);
-    reader.readAsDataURL(blob);
-};
-const getFontDataURL = (url, cb) => {
-    fetch(url).then(r => r.blob()).then(blob => readFileToURL(blob, cb));
-};
-const getFontStyle = (fontName, cb) => {
-    getFontDataURL(`${fontName}.woff?v={version}`, url => cb(`@font-face{font-family:${fontName};src:url(${url})}`));
-};
-getFontStyle('slice', styleText => {
-    svgEl.querySelector('style').innerHTML = styleText;
-    const styleEl = createElement('style');
-    styleEl.innerHTML = styleText;
-    head.appendChild(styleEl);
-    setTimeout(_ => htmlEl.removeAttribute('data-loading'), 2e3);
-});
+setTimeout(_ => htmlEl.removeAttribute('data-loading'), 2e3);
 
 const width = 2560;
 const height = 2480;
@@ -190,14 +150,14 @@ const saveImage = _ => {
 };
 
 const shareEl = $(".about");
-addEvent($('.share-btn'), 'click', function () {
+addEvent($('#share-btn'), 'click', function () {
     shareEl.style.display = "flex";
 });
 addEvent($('a', shareEl), 'click', _ => {
     shareEl.style.display = 'none';
 });
 
-addEvent($('.save-btn'), 'click', saveImage);
+addEvent($('#save-btn'), 'click', saveImage);
 
 addEvent($('a', outputEl), 'click', _ => {
     outputImageStyle.display = 'none'
