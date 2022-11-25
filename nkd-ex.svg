@@ -6,7 +6,7 @@
 <style type="text/css">
 	.st0{fill:#FFFFFF;stroke:#000000;stroke-width:9;}
 	.st3{font-size:92px;}
-    .st4{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#000000;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;}
+    .st4{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#000000;stroke-width:14;stroke-linecap:round;stroke-linejoin:round;}
 	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#FF7E7E;}
 	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#FFB57E;}
 	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#FFE57E;}
@@ -17,6 +17,7 @@
 	.st13{font-size:150px;}
     .st14{fill:#FFFFFFbb;}
     .st15{font-weight:bold;}
+    .st16{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
 </style>
     <g id="countrys">
 	<rect id="松禾体育场" x="1851.2" y="573.2" class="st0" width="198.7" height="545.2"/>
@@ -1319,13 +1320,14 @@
 		H2187.4z M2190.5,1273v5h53.6v-5H2190.5z"/>
 </g>
     <g id="score-rules">
-	<rect x="1957.5" y="1746.9" class="st4" width="401.6" height="646"/>
-        <rect x="1959.5" y="1749.8" class="st5" width="397.3" height="91.4"/>
-        <rect x="1959.5" y="1841.3" class="st6" width="397.3" height="91.4"/>
-        <rect x="1959.5" y="1932.9" class="st7" width="397.3" height="91.4"/>
-        <rect x="1959.5" y="2024.3" class="st8" width="397.3" height="91.4"/>
-        <rect x="1959.5" y="2115.9" class="st9" width="397.3" height="91.4"/>
-        <rect x="1959.5" y="2207.3" class="st10" width="397.3" height="91.4"/>
+	<rect x="1967.5" y="1746.9" class="st4" width="391.6" height="646"/>
+        <rect x="1969.5" y="1749.8" class="st5" width="387.3" height="91.4"/>
+        <rect x="1969.5" y="1841.3" class="st6" width="387.3" height="91.4"/>
+        <rect x="1969.5" y="1932.9" class="st7" width="387.3" height="91.4"/>
+        <rect x="1969.5" y="2024.3" class="st8" width="387.3" height="91.4"/>
+        <rect x="1969.5" y="2115.9" class="st9" width="387.3" height="91.4"/>
+        <rect x="1969.5" y="2207.3" class="st10" width="387.3" height="91.4"/>
+        <rect x="1969.5" y="2298.7" class="st16" width="387.3" height="91.4"/>
         <text transform="matrix(1 0 0 1 2056.9375 1812.752)" class="st2 st11">５居住</text>
         <text transform="matrix(1 0 0 1 2056.9375 1904.2422)" class="st2 st11">４常去</text>
         <text transform="matrix(1 0 0 1 2056.9375 1995.7305)" class="st2 st11">３有时去</text>
